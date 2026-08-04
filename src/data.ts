@@ -40,20 +40,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Side Project",
-    period: "Coming soon",
-    blurb: "Details coming soon.",
-    bullets: [],
+    title: "Personal Resume Site",
+    period: "2026",
+    blurb:
+      "This site — a React + Vite + Tailwind portfolio with a persistent animated background, an alternating experience timeline, and a podcast page.",
+    bullets: [
+      "Single fixed canvas background layer shared across every route, styled with subtle Google-brand color accents",
+      "Client-side routed pages (Home, Podcast, CV) built with react-router",
+      "Experience cards zig-zag along a logo-marked timeline, each expandable inline for more detail",
+    ],
     accent: "blue",
-    placeholder: true,
+    link: "https://github.com/paalaakshaah/resume-site",
   },
   {
-    title: "Side Project",
-    period: "Coming soon",
-    blurb: "Details coming soon.",
-    bullets: [],
+    title: "U.S. Visa Bulletin Tracker",
+    period: "2026",
+    blurb:
+      "A full pipeline for tracking and visualizing the Dept. of State Visa Bulletin: a Python scraper, a SQLite database, and a Next.js dashboard.",
+    bullets: [
+      "Scraped and normalized 164 months of bulletin data (Jan 2013 – Aug 2026, ~21,500 data points) into a queryable SQLite schema",
+      "Built a Next.js + Tailwind + Recharts dashboard where users enter their category, country, and priority date to see exactly where they stand on the trend chart",
+      "Handled 13 years of shifting category and chargeability-area definitions without losing the original source data",
+    ],
     accent: "green",
-    placeholder: true,
+    link: "https://github.com/paalaakshaah/Visa-Bulletin-Tracker",
   },
   {
     title: "Side Project",
