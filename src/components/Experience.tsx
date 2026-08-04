@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { experience, type ExperienceHighlight } from "../data";
+import { experience, type ExperienceHighlight, type ExperienceItem } from "../data";
 import { accentMap, accentOrder, type Accent } from "../accentColors";
 import { ChevronDownIcon } from "./Icons";
 
@@ -45,47 +45,71 @@ function HighlightRow({ highlight, accent }: { highlight: ExperienceHighlight; a
   );
 }
 
+function ExperienceCard({ item, accent }: { item: ExperienceItem; accent: Accent }) {
+  const colors = accentMap[accent];
+  const showCardPeriod = item.highlights.length > 1;
+
+  return (
+    <div className="relative overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] p-5">
+      <span className={`absolute inset-x-0 top-0 h-[3px] ${colors.bg}`} />
+      <h3 className="text-base font-medium leading-tight text-[var(--text-h)]">{item.title}</h3>
+      <div className="mt-0.5 flex items-baseline gap-2">
+        <p className={`text-xs font-medium ${colors.text}`}>{item.org}</p>
+        {showCardPeriod && (
+          <>
+            <span className="text-xs text-[var(--text-muted)]">·</span>
+            <p className="text-xs font-medium text-[var(--text-muted)]">{item.period}</p>
+          </>
+        )}
+      </div>
+
+      <div className="mt-3 divide-y divide-[var(--border)]">
+        {item.highlights.map((highlight, j) => (
+          <HighlightRow key={j} highlight={highlight} accent={accent} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-3xl px-6 pt-20">
+    <section id="experience" className="mx-auto max-w-5xl px-6 pt-20">
       <h2 className="text-2xl font-semibold text-[var(--text-h)]">Experience</h2>
 
-      <ol className="mt-10 space-y-8">
+      <ol className="relative mt-10 space-y-8">
         {experience.map((item, i) => {
           const accent = accentOrder[i % accentOrder.length];
-          const colors = accentMap[accent];
+          const isFirst = i === 0;
           const isLast = i === experience.length - 1;
-          const showCardPeriod = item.highlights.length > 1;
+          const isLeft = i % 2 === 0;
 
           return (
-            <li key={i} className="relative pl-20">
+            <li key={i} className="relative">
+              {isFirst && (
+                <>
+                  <span className="absolute -top-8 left-7 h-8 w-1 rounded-full bg-[var(--border)] sm:hidden" />
+                  <span className="absolute -top-8 left-1/2 hidden h-8 w-1 -translate-x-1/2 rounded-full bg-[var(--border)] sm:block" />
+                </>
+              )}
               {!isLast && (
-                <span className="absolute left-7 top-14 bottom-[-3.75rem] w-px bg-[var(--border)]" />
+                <>
+                  <span className="absolute left-7 top-14 bottom-[-2.75rem] w-1 bg-[var(--border)] sm:hidden" />
+                  <span className="absolute left-1/2 top-14 bottom-[-2.75rem] hidden w-1 -translate-x-1/2 bg-[var(--border)] sm:block" />
+                </>
               )}
 
-              <div className="absolute left-0 top-0 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white ring-1 ring-[var(--border)] shadow-sm">
-                <img src={item.logo} alt="" className="h-8 w-8 object-contain" />
-              </div>
-
-              <div className="relative overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] p-5">
-                <span className={`absolute inset-x-0 top-0 h-[3px] ${colors.bg}`} />
-                <h3 className="text-base font-medium leading-tight text-[var(--text-h)]">
-                  {item.title}
-                </h3>
-                <div className="mt-0.5 flex items-baseline gap-2">
-                  <p className={`text-xs font-medium ${colors.text}`}>{item.org}</p>
-                  {showCardPeriod && (
-                    <>
-                      <span className="text-xs text-[var(--text-muted)]">·</span>
-                      <p className="text-xs font-medium text-[var(--text-muted)]">{item.period}</p>
-                    </>
-                  )}
+              <div className="grid grid-cols-[auto_1fr] items-start gap-x-6 sm:grid-cols-[1fr_auto_1fr] sm:gap-x-8">
+                <div className="relative z-10 col-start-1 row-start-1 flex h-14 w-14 items-center justify-center rounded-full bg-white ring-1 ring-[var(--border)] shadow-sm sm:col-start-2 sm:justify-self-center">
+                  <img src={item.logo} alt="" className="h-8 w-8 object-contain" />
                 </div>
 
-                <div className="mt-3 divide-y divide-[var(--border)]">
-                  {item.highlights.map((highlight, j) => (
-                    <HighlightRow key={j} highlight={highlight} accent={accent} />
-                  ))}
+                <div
+                  className={`col-start-2 row-start-1 ${
+                    isLeft ? "sm:col-start-1 sm:row-start-1" : "sm:col-start-3 sm:row-start-1"
+                  }`}
+                >
+                  <ExperienceCard item={item} accent={accent} />
                 </div>
               </div>
             </li>
