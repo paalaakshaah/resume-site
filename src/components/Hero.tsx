@@ -1,5 +1,6 @@
 import { profile } from "../data";
 import StarField from "./StarField";
+import Nav from "./Nav";
 import headshot from "../assets/headshot.jpg";
 import {
   GitHubIcon,
@@ -24,7 +25,9 @@ export default function Hero() {
         <StarField />
       </div>
 
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-24 text-center sm:py-32">
+      <Nav />
+
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pb-24 pt-4 text-center sm:pb-32">
         <div className="relative mb-6 h-28 w-28 rounded-full p-[3px]">
           <div
             className="h-full w-full rounded-full"

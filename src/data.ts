@@ -3,6 +3,18 @@ import mapsLogo from "./assets/logos/GoogleMaps.png";
 import androidAutoLogo from "./assets/logos/AndroidAuto.png";
 import adsLogo from "./assets/logos/GoogleAds.png";
 import googleLogo from "./assets/logos/Google-logo.png";
+import podcastCover from "./assets/TheRomanticRealistReview.png";
+
+export const cvUrl = "/Palak%20Shah%20-%20Resume%20-%20May%202026.pdf";
+
+export const podcast = {
+  title: "The Romantic Realist Review",
+  cover: podcastCover,
+  spotify: "https://open.spotify.com/show/5HgWTQDMwnvCuddOooa6ph",
+  apple: "https://podcasts.apple.com/us/podcast/the-romantic-realist-review/id1877019619",
+  amazon:
+    "https://music.amazon.ca/fr-ca/podcasts/86faea90-c20e-4253-a170-c3dc82e9b2e0/the-romantic-realist-review",
+};
 
 export const profile = {
   name: "Palak Shah",

@@ -58,6 +58,36 @@ export function LocationIcon({ className }: IconProps) {
   );
 }
 
+export function SpotifyIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
+      <path d="M6 10.5c4-1.2 8-1 11.5 1" strokeLinecap="round" />
+      <path d="M6.5 13.5c3.3-1 6.6-.8 9.5.9" strokeLinecap="round" />
+      <path d="M7 16.3c2.6-.7 5.2-.6 7.5.7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function PodcastIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
+      <circle cx="12" cy="9" r="3.5" />
+      <path d="M8 13.5c-1.6 1.4-1.6 5 0 6.5M16 13.5c1.6 1.4 1.6 5 0 6.5" strokeLinecap="round" />
+      <path d="M12 12.5V21" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function MusicNoteIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
+      <path d="M9 18V5.5l10-2v12" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="6.5" cy="18" r="2.5" />
+      <circle cx="16.5" cy="15.5" r="2.5" />
+    </svg>
+  );
+}
+
 export function DownloadIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
