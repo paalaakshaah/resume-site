@@ -1,3 +1,9 @@
+import aiModeLogo from "./assets/logos/Gemini.png";
+import mapsLogo from "./assets/logos/GoogleMaps.png";
+import androidAutoLogo from "./assets/logos/AndroidAuto.png";
+import adsLogo from "./assets/logos/GoogleAds.png";
+import googleLogo from "./assets/logos/Google-logo.png";
+
 export const profile = {
   name: "Palak Shah",
   title: "Software Engineer — ML, Ranking & Gen AI",
@@ -52,6 +58,7 @@ export type ExperienceItem = {
   org: string;
   period: string;
   description: string;
+  logo: string;
 };
 
 export const experience: ExperienceItem[] = [
@@ -60,6 +67,7 @@ export const experience: ExperienceItem[] = [
     org: "Google, New York",
     period: "Jul 2024 – Nov 2025",
     description: "Backend / Gen AI — hierarchical framework for local query resolution.",
+    logo: aiModeLogo,
   },
   {
     title: "Software Engineer — Maps Quality",
@@ -67,12 +75,14 @@ export const experience: ExperienceItem[] = [
     period: "Oct 2023 – Jun 2024",
     description:
       "Backend / Ranking — Search Along Route ranking, plus DMA 5(2) compliance for Maps ranking pipelines.",
+    logo: mapsLogo,
   },
   {
     title: "Software Engineer — Google Assistant, Android Auto",
     org: "Google, New York",
     period: "Jan 2020 – Mar 2022",
     description: "Backend / On-device — NLP and offline search for Android Automotive OS.",
+    logo: androidAutoLogo,
   },
   {
     title: "Software Engineer — Ads Privacy and Security",
@@ -80,12 +90,14 @@ export const experience: ExperienceItem[] = [
     period: "Jul 2016 – Dec 2019",
     description:
       "Backend — policy enforcement rule engine, Bigtable migration, and an Engineering Excellence initiative across code quality and tech debt.",
+    logo: adsLogo,
   },
   {
     title: "Engineering Resident — Hiring Applications",
     org: "Google, New York",
     period: "Jul 2015 – Jul 2016",
     description: "Full Stack — productionized Google's hiring software with GWT, CSS, and HTML.",
+    logo: googleLogo,
   },
 ];
 
