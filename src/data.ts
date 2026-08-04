@@ -22,52 +22,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "AI Mode — Local Query Fan-Out",
-    period: "Jul 2024 – Nov 2025 · Google",
-    blurb:
-      "Google's AI Mode turns standard search into an intuitive, multi-modal conversation. I designed a hierarchical AI framework for resolving local queries.",
-    bullets: [
-      "Built a model to understand user intent and generate complementary fan-out queries",
-      "Architected the interface between generative models and legacy Maps backend services for low-latency responses",
-      "Trained a summarization model to aggregate backend outputs, evaluated with auto-raters for helpfulness and correctness",
-    ],
-    accent: "blue",
-  },
-  {
-    title: "Search Along Route Ranking",
-    period: "Mar 2022 – Jun 2024 · Google Maps",
-    blurb:
-      "Search Along Route (and Explore Along Your Route) helps drivers find stops — gas, food, viewpoints — without detouring from their path.",
-    bullets: [
-      "Engineered high-throughput data ingestion and transformation pipelines to power ranking models",
-      "Leveraged deep neural network architectures to refine Maps ranking algorithms, reducing feature latency",
-    ],
-    accent: "green",
-  },
-  {
-    title: "Ads Policy Rule Engine",
-    period: "Jul 2016 – Dec 2019 · Google Ads",
-    blurb:
-      "Founding member of Ads Integrity: Human Interactions, bridging platform security and advertiser productivity.",
-    bullets: [
-      "Designed and owned a high-throughput RPC-based rule engine as the core policy enforcement layer across Google Ads, AdWords Express, and the Ads API",
-      "Led migration of large-scale advertising datasets to Bigtable via distributed Flume/MapReduce pipelines",
-      "Built real-time advertiser messaging and automated re-crawl/re-review pipelines, cutting latency in compliance workflows",
-    ],
-    accent: "red",
-  },
-  {
-    title: "Android Automotive OS",
-    period: "Jan 2020 – Mar 2022 · Google Assistant, Android Auto",
-    blurb:
-      "AAOS runs directly on the car's hardware — no phone required. I worked on-device to make offline local search work well.",
-    bullets: [
-      "Updated on-device NLP models to improve understanding of directional and local search queries",
-      "Optimized on-device server infrastructure to query locally stored maps, enabling offline search",
-    ],
-    accent: "yellow",
-  },
-  {
     title: "Side Project",
     period: "Coming soon",
     blurb: "Details coming soon.",

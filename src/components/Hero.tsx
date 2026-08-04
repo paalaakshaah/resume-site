@@ -19,8 +19,8 @@ const socials = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-[var(--border)]">
-      <div className="pointer-events-none absolute inset-0 opacity-70">
+    <section className="relative overflow-hidden border-b border-[var(--hero-border)] bg-[var(--hero-bg)]">
+      <div className="pointer-events-none absolute inset-0">
         <StarField />
       </div>
 
@@ -33,7 +33,7 @@ export default function Hero() {
                 "conic-gradient(from 0deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4)",
             }}
           >
-            <div className="h-full w-full overflow-hidden rounded-full bg-[var(--bg)] m-[3px]">
+            <div className="h-full w-full overflow-hidden rounded-full bg-[var(--hero-bg)] m-[3px]">
               <img
                 src={headshot}
                 alt={profile.name}
@@ -43,17 +43,17 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="text-4xl font-semibold tracking-tight text-[var(--text-h)] sm:text-5xl">
+        <h1 className="text-4xl font-semibold tracking-tight text-[var(--hero-text-h)] sm:text-5xl">
           {profile.name}
         </h1>
-        <p className="mt-3 text-lg text-[var(--text)]">{profile.title}</p>
+        <p className="mt-3 text-lg text-[var(--hero-text)]">{profile.title}</p>
 
-        <div className="mt-2 flex items-center gap-1.5 text-sm text-[var(--text-muted)]">
+        <div className="mt-2 flex items-center gap-1.5 text-sm text-[var(--hero-text-muted)]">
           <LocationIcon className="h-3.5 w-3.5" />
           <span>{profile.location}</span>
         </div>
 
-        <p className="mt-6 max-w-xl text-balance text-sm leading-relaxed text-[var(--text)]">
+        <p className="mt-6 max-w-xl text-balance text-sm leading-relaxed text-[var(--hero-text)]">
           {profile.summary}
         </p>
 
@@ -65,7 +65,7 @@ export default function Hero() {
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               aria-label={label}
-              className="group flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text)] transition-colors duration-200"
+              className="group flex h-10 w-10 items-center justify-center rounded-full border border-[var(--hero-border)] bg-[var(--hero-bg-elevated)] text-[var(--hero-text)] transition-colors duration-200"
               style={{ ["--hover-color" as string]: color }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = color;
@@ -84,7 +84,7 @@ export default function Hero() {
         <a
           href="/resume.pdf"
           download
-          className="mt-10 inline-flex items-center gap-2 rounded-full bg-[var(--text-h)] px-5 py-2.5 text-sm font-medium text-[var(--bg)] transition-transform hover:scale-[1.03]"
+          className="mt-10 inline-flex items-center gap-2 rounded-full bg-[var(--hero-text-h)] px-5 py-2.5 text-sm font-medium text-[var(--hero-bg)] transition-transform hover:scale-[1.03]"
         >
           <DownloadIcon className="h-4 w-4" />
           Download Resume

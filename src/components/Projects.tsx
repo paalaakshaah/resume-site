@@ -6,7 +6,7 @@ export default function Projects() {
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20">
       <h2 className="text-2xl font-semibold text-[var(--text-h)]">Projects</h2>
       <p className="mt-2 text-sm text-[var(--text-muted)]">
-        Highlights from my work at Google, plus a few things I've built on the side.
+        A few things I've built on the side.
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

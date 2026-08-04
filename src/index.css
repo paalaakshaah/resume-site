@@ -1,12 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0d0f14;
-  --bg-elevated: #14171f;
-  --border: #262a35;
-  --text: #a8adba;
-  --text-h: #f3f4f6;
+  --bg: #ffffff;
+  --bg-elevated: #f7f8fa;
+  --border: #e5e7eb;
+  --text: #4b5563;
+  --text-h: #111318;
   --text-muted: #6b7280;
+
+  /* Hero stays dark regardless of the page theme */
+  --hero-bg: #0d0f14;
+  --hero-bg-elevated: #14171f;
+  --hero-border: #262a35;
+  --hero-text: #a8adba;
+  --hero-text-h: #f3f4f6;
+  --hero-text-muted: #6b7280;
 
   --g-blue: #4285f4;
   --g-red: #ea4335;

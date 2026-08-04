@@ -37,8 +37,8 @@ export default function StarField() {
       points = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
         color: GOOGLE_COLORS[Math.floor(Math.random() * GOOGLE_COLORS.length)],
       }));
     }
@@ -62,8 +62,8 @@ export default function StarField() {
           const dy = p.y - q.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 140) {
-            ctx.strokeStyle = `rgba(148, 163, 184, ${0.12 * (1 - dist / 140)})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(200, 210, 224, ${0.32 * (1 - dist / 140)})`;
+            ctx.lineWidth = 1.2;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
@@ -74,9 +74,9 @@ export default function StarField() {
 
       for (const p of points) {
         ctx.beginPath();
-        ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
-        ctx.globalAlpha = 0.55;
+        ctx.globalAlpha = 0.95;
         ctx.fill();
         ctx.globalAlpha = 1;
       }
