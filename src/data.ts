@@ -10,6 +10,8 @@ export const cvUrl = "/Palak%20Shah%20-%20Resume%20-%20May%202026.pdf";
 export const podcast = {
   title: "The Romantic Realist Review",
   cover: podcastCover,
+  description:
+    "Is Dilwale Dulhania Le Jayenge the ultimate love story, or a series of questionable life choices? Welcome to The Romantic Realist Review, where we dissect Bollywood classics through two opposing lenses — Nidhi makes the romantic case, Palak plays the skeptic — picking apart plot inconsistencies, grand declarations, and the most quotable lines along the way.",
   spotify: "https://open.spotify.com/show/5HgWTQDMwnvCuddOooa6ph",
   apple: "https://podcasts.apple.com/us/podcast/the-romantic-realist-review/id1877019619",
   amazon:

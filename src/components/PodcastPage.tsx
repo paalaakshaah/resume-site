@@ -40,7 +40,12 @@ export default function PodcastPage() {
           <h1 className="mt-8 text-3xl font-semibold tracking-tight text-[var(--hero-text-h)] sm:text-4xl">
             {podcast.title}
           </h1>
-          <p className="mt-3 text-sm text-[var(--hero-text-muted)]">Listen on</p>
+
+          <p className="mt-4 max-w-xl text-balance text-sm leading-relaxed text-[var(--hero-text)]">
+            {podcast.description}
+          </p>
+
+          <p className="mt-6 text-sm text-[var(--hero-text-muted)]">Listen on</p>
 
           <div className="mt-4 flex flex-col items-stretch gap-3 sm:flex-row">
             {platforms.map(({ label, href, icon: Icon, bg }) => (
