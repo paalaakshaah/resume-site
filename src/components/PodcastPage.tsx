@@ -1,5 +1,4 @@
 import { podcast } from "../data";
-import StarField from "./StarField";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { SpotifyIcon, MusicNoteIcon, PodcastIcon } from "./Icons";
@@ -27,12 +26,8 @@ const platforms = [
 
 export default function PodcastPage() {
   return (
-    <div className="min-h-screen bg-[var(--bg)]">
-      <section className="relative overflow-hidden border-b border-[var(--hero-border)] bg-[var(--hero-bg)]">
-        <div className="pointer-events-none absolute inset-0">
-          <StarField />
-        </div>
-
+    <>
+      <section className="relative border-b border-[var(--hero-border)]">
         <Nav />
 
         <div className="relative mx-auto flex max-w-2xl flex-col items-center px-6 pb-24 pt-4 text-center sm:pb-32">
@@ -66,6 +61,6 @@ export default function PodcastPage() {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 }

@@ -33,12 +33,12 @@ export default function StarField() {
       canvas.style.height = `${height}px`;
       ctx?.scale(devicePixelRatio, devicePixelRatio);
 
-      const count = Math.min(60, Math.floor((width * height) / 18000));
+      const count = Math.min(90, Math.floor((width * height) / 12000));
       points = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 0.75,
+        vy: (Math.random() - 0.5) * 0.75,
         color: GOOGLE_COLORS[Math.floor(Math.random() * GOOGLE_COLORS.length)],
       }));
     }

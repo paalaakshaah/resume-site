@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BackgroundLayer from "./components/BackgroundLayer";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
@@ -11,26 +12,31 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-[var(--bg)]">
+    <>
       <Hero />
-      <Projects />
-      <Experience />
-      <Education />
-      <Skills />
+      <div className="bg-[var(--bg)]">
+        <Projects />
+        <Experience />
+        <Education />
+        <Skills />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
 function App() {
   return (
     <BrowserRouter>
+      <BackgroundLayer />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/podcast" element={<PodcastPage />} />
-        <Route path="/cv" element={<CVPage />} />
-      </Routes>
+      <div className="relative">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/podcast" element={<PodcastPage />} />
+          <Route path="/cv" element={<CVPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

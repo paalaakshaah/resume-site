@@ -1,5 +1,4 @@
 import { profile } from "../data";
-import StarField from "./StarField";
 import Nav from "./Nav";
 import headshot from "../assets/headshot.jpg";
 import {
@@ -20,11 +19,7 @@ const socials = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-[var(--hero-border)] bg-[var(--hero-bg)]">
-      <div className="pointer-events-none absolute inset-0">
-        <StarField />
-      </div>
-
+    <section className="relative border-b border-[var(--hero-border)]">
       <Nav />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pb-24 pt-4 text-center sm:pb-32">
