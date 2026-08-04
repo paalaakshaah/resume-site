@@ -98,6 +98,12 @@ export default function Experience() {
                   <span className="absolute left-1/2 top-14 bottom-[-2.75rem] hidden w-1 -translate-x-1/2 bg-[var(--border)] sm:block" />
                 </>
               )}
+              {isLast && (
+                <>
+                  <span className="absolute left-7 top-14 h-8 w-1 rounded-full bg-[var(--border)] sm:hidden" />
+                  <span className="absolute left-1/2 top-14 hidden h-8 w-1 -translate-x-1/2 rounded-full bg-[var(--border)] sm:block" />
+                </>
+              )}
 
               <div className="grid grid-cols-[auto_1fr] items-start gap-x-6 sm:grid-cols-[1fr_auto_1fr] sm:gap-x-8">
                 <div className="relative z-10 col-start-1 row-start-1 flex h-14 w-14 items-center justify-center rounded-full bg-white ring-1 ring-[var(--border)] shadow-sm sm:col-start-2 sm:justify-self-center">
