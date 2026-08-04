@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { projects, type Project } from "../data";
 import { accentMap } from "../accentColors";
-import { GitHubIcon, ChevronDownIcon } from "./Icons";
+import { GitHubIcon, ChevronDownIcon, ExternalLinkIcon } from "./Icons";
 
 function ProjectCard({ project }: { project: Project }) {
   const accent = accentMap[project.accent];
@@ -19,43 +19,59 @@ function ProjectCard({ project }: { project: Project }) {
       <p className={`mt-1 text-xs font-medium ${accent.text}`}>{project.period}</p>
       <p className="mt-3 text-sm leading-relaxed text-[var(--text)]">{project.blurb}</p>
 
-      {collapsible && (
-        <>
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            className={`mt-3 inline-flex items-center gap-1 text-xs font-medium ${accent.text}`}
-          >
-            {open ? "Show less" : "Learn more"}
-            <ChevronDownIcon
-              className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}
-            />
-          </button>
-
-          {open && (
-            <ul className="mt-3 space-y-1.5">
-              {project.bullets.map((b, j) => (
-                <li key={j} className="flex gap-2 text-xs leading-relaxed text-[var(--text-muted)]">
-                  <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent.bg}`} />
-                  {b}
-                </li>
-              ))}
-            </ul>
-          )}
-        </>
-      )}
-
-      {project.link && (
+      {project.demoUrl && (
         <a
-          href={project.link}
+          href={project.demoUrl}
           target="_blank"
           rel="noreferrer"
-          className={`mt-4 inline-flex items-center gap-1.5 text-xs font-medium ${accent.text}`}
+          className={`mt-3 inline-flex items-center gap-1.5 text-xs font-medium ${accent.text}`}
         >
-          <GitHubIcon className="h-3.5 w-3.5" />
-          View on GitHub
+          <ExternalLinkIcon className="h-3.5 w-3.5" />
+          Visit Site
         </a>
+      )}
+
+      {collapsible && (
+        <>
+          <div>
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              className={`mt-3 inline-flex items-center gap-1 text-xs font-medium ${accent.text}`}
+            >
+              {open ? "Show less" : "Learn more"}
+              <ChevronDownIcon
+                className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}
+              />
+            </button>
+          </div>
+
+          {open && (
+            <>
+              <ul className="mt-3 space-y-1.5">
+                {project.bullets.map((b, j) => (
+                  <li key={j} className="flex gap-2 text-xs leading-relaxed text-[var(--text-muted)]">
+                    <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent.bg}`} />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`mt-3 inline-flex items-center gap-1.5 text-xs font-medium ${accent.text}`}
+                >
+                  <GitHubIcon className="h-3.5 w-3.5" />
+                  View on GitHub
+                </a>
+              )}
+            </>
+          )}
+        </>
       )}
     </div>
   );

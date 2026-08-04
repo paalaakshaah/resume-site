@@ -34,6 +34,7 @@ export type Project = {
   blurb: string;
   bullets: string[];
   accent: "blue" | "red" | "yellow" | "green";
+  demoUrl?: string;
   link?: string;
   placeholder?: boolean;
 };
@@ -63,6 +64,7 @@ export const projects: Project[] = [
       "Handled 13 years of shifting category and chargeability-area definitions without losing the original source data",
     ],
     accent: "green",
+    demoUrl: "https://green-card-bulletin-tracker.vercel.app/",
     link: "https://github.com/paalaakshaah/Visa-Bulletin-Tracker",
   },
   {
