@@ -47,14 +47,14 @@ export const projects: Project[] = [
   },
 ];
 
-export type TimelineItem = {
+export type ExperienceItem = {
   title: string;
   org: string;
   period: string;
   description: string;
 };
 
-export const timeline: TimelineItem[] = [
+export const experience: ExperienceItem[] = [
   {
     title: "Software Engineer — AI Mode",
     org: "Google, New York",
@@ -87,17 +87,24 @@ export const timeline: TimelineItem[] = [
     period: "Jul 2015 – Jul 2016",
     description: "Full Stack — productionized Google's hiring software with GWT, CSS, and HTML.",
   },
+];
+
+export type EducationItem = {
+  degree: string;
+  school: string;
+  period: string;
+};
+
+export const education: EducationItem[] = [
   {
-    title: "MS, Electrical and Computer Engineering",
-    org: "University of Florida",
+    degree: "MS, Electrical and Computer Engineering",
+    school: "University of Florida",
     period: "Aug 2013 – May 2015",
-    description: "",
   },
   {
-    title: "BTech, Information and Communication Technology",
-    org: "Dhirubhai Ambani Institute",
+    degree: "BTech, Information and Communication Technology",
+    school: "Dhirubhai Ambani Institute",
     period: "Aug 2009 – May 2013",
-    description: "",
   },
 ];
 

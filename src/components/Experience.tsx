@@ -1,13 +1,13 @@
-import { timeline } from "../data";
+import { experience } from "../data";
 import { accentMap, accentOrder } from "../accentColors";
 
-export default function Timeline() {
+export default function Experience() {
   return (
-    <section id="timeline" className="mx-auto max-w-3xl px-6 py-20">
-      <h2 className="text-2xl font-semibold text-[var(--text-h)]">Experience & Education</h2>
+    <section id="experience" className="mx-auto max-w-3xl px-6 pt-20">
+      <h2 className="text-2xl font-semibold text-[var(--text-h)]">Experience</h2>
 
       <ol className="relative mt-10 border-l border-[var(--border)] pl-8">
-        {timeline.map((item, i) => {
+        {experience.map((item, i) => {
           const accent = accentMap[accentOrder[i % accentOrder.length]];
           return (
             <li key={i} className="relative pb-10 last:pb-0">

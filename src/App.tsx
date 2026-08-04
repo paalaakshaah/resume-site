@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-import Timeline from "./components/Timeline";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 
@@ -9,7 +10,8 @@ function App() {
     <div className="min-h-screen bg-[var(--bg)]">
       <Hero />
       <Projects />
-      <Timeline />
+      <Experience />
+      <Education />
       <Skills />
       <Footer />
     </div>
