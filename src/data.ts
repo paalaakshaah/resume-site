@@ -53,12 +53,19 @@ export const projects: Project[] = [
   },
 ];
 
+export type ExperienceHighlight = {
+  title: string;
+  period: string;
+  summary: string;
+  detail: string[];
+};
+
 export type ExperienceItem = {
   title: string;
   org: string;
   period: string;
-  description: string;
   logo: string;
+  highlights: ExperienceHighlight[];
 };
 
 export const experience: ExperienceItem[] = [
@@ -66,38 +73,107 @@ export const experience: ExperienceItem[] = [
     title: "Software Engineer — AI Mode",
     org: "Google, New York",
     period: "Jul 2024 – Nov 2025",
-    description: "Backend / Gen AI — hierarchical framework for local query resolution.",
     logo: aiModeLogo,
+    highlights: [
+      {
+        title: "Local Query Fan-Out",
+        period: "Jul 2024 – Nov 2025",
+        summary:
+          "Designed a hierarchical AI framework so AI Mode can resolve local, map-based queries.",
+        detail: [
+          "Built a model to understand user intent and generate complementary fan-out queries",
+          "Architected the interface between generative models and legacy Maps backend services for low-latency responses",
+          "Trained a summarization model to aggregate backend outputs, evaluated with auto-raters for helpfulness and correctness",
+        ],
+      },
+    ],
   },
   {
     title: "Software Engineer — Maps Quality",
     org: "Google, New York",
-    period: "Oct 2023 – Jun 2024",
-    description:
-      "Backend / Ranking — Search Along Route ranking, plus DMA 5(2) compliance for Maps ranking pipelines.",
+    period: "Mar 2022 – Jun 2024",
     logo: mapsLogo,
+    highlights: [
+      {
+        title: "Search Along Route Ranking",
+        period: "Mar 2022 – Jun 2024",
+        summary:
+          "Helped drivers find stops — gas, food, viewpoints — without detouring from their route.",
+        detail: [
+          "Engineered high-throughput data ingestion and transformation pipelines to power ranking models",
+          "Leveraged deep neural network architectures to refine Maps ranking algorithms, reducing feature latency",
+        ],
+      },
+      {
+        title: "DMA 5(2) Compliance",
+        period: "Oct 2023 – Feb 2024",
+        summary: "Joined a rapid-response team to bring Maps ranking pipelines into compliance.",
+        detail: [
+          "Ensured Maps ranking pipelines met Article 5(2) of the EU Digital Markets Act, which limits pooling user data across services",
+        ],
+      },
+    ],
   },
   {
     title: "Software Engineer — Google Assistant, Android Auto",
     org: "Google, New York",
     period: "Jan 2020 – Mar 2022",
-    description: "Backend / On-device — NLP and offline search for Android Automotive OS.",
     logo: androidAutoLogo,
+    highlights: [
+      {
+        title: "On-Device Search for Android Automotive OS",
+        period: "Jan 2020 – Mar 2022",
+        summary: "Made local and directional search work reliably on-device, even offline.",
+        detail: [
+          "Updated on-device NLP models to improve understanding of directional and local search queries",
+          "Optimized on-device server infrastructure to query locally stored maps, enabling offline search",
+        ],
+      },
+    ],
   },
   {
     title: "Software Engineer — Ads Privacy and Security",
     org: "Google, California",
     period: "Jul 2016 – Dec 2019",
-    description:
-      "Backend — policy enforcement rule engine, Bigtable migration, and an Engineering Excellence initiative across code quality and tech debt.",
     logo: adsLogo,
+    highlights: [
+      {
+        title: "Ads Policy Rule Engine",
+        period: "Jul 2016 – Dec 2019",
+        summary:
+          "Founding member of Ads Integrity: Human Interactions, bridging platform security and advertiser productivity.",
+        detail: [
+          "Designed and owned a high-throughput RPC-based rule engine as the core policy enforcement layer across Google Ads, AdWords Express, and the Ads API",
+          "Led migration of large-scale advertising datasets to Bigtable via distributed Flume/MapReduce pipelines",
+          "Built real-time advertiser messaging and automated re-crawl/re-review pipelines, cutting latency in compliance workflows",
+        ],
+      },
+      {
+        title: "Engineering Excellence Initiative",
+        period: "Jul 2018 – Dec 2019",
+        summary: "Headed a cross-functional push to raise code quality and cut tech debt.",
+        detail: [
+          "Drove measurable improvements in code quality, technical debt reduction, and team velocity over multiple quarters",
+        ],
+      },
+    ],
   },
   {
     title: "Engineering Resident — Hiring Applications",
     org: "Google, New York",
     period: "Jul 2015 – Jul 2016",
-    description: "Full Stack — productionized Google's hiring software with GWT, CSS, and HTML.",
     logo: googleLogo,
+    highlights: [
+      {
+        title: "Hiring Software Productionization",
+        period: "Jul 2015 – Jul 2016",
+        summary: "Full stack — productionized Google's internal hiring software.",
+        detail: [
+          "Productionized Google's hiring software using Google Web Toolkit (GWT), CSS, and HTML",
+          "Delivered scalable front-end solutions that improved hiring pipeline efficiency while maintaining code quality and accessibility standards",
+        ],
+      },
+    ],
   },
 ];
 
