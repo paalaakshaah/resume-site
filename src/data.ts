@@ -27,7 +27,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/palakshah2015/",
   github: "https://github.com/paalaakshaah",
   summary:
-    "Software Engineer with extensive experience in machine learning, ranking algorithms, and Gen AI development within global-scale environments (Maps, Auto, Ads). Committed to high-quality engineering standards and architectural integrity — building technology that isn't just powerful, but purposefully designed to solve real-world complexities.",
+    "Software Engineer with 10+ years of experience at Google building scalable systems across Maps, Auto, and Ads. Specializing in machine learning, large-scale data ecosystems, and Gen AI development.",
 };
 
 export type Project = {
