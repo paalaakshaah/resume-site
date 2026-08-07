@@ -20,7 +20,7 @@ export const podcast = {
 
 export const profile = {
   name: "Palak Shah",
-  title: "Software Engineer — ML, Ranking & Gen AI",
+  title: "Software Engineer — ML, Bigdata & Gen AI",
   location: "Hoboken, NJ",
   phone: "(352) 433-9024",
   email: "spalak12@gmail.com",

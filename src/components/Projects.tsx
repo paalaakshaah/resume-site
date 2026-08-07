@@ -80,9 +80,9 @@ function ProjectCard({ project }: { project: Project }) {
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20">
-      <h2 className="text-2xl font-semibold text-[var(--text-h)]">Projects</h2>
+      <h2 className="text-2xl font-semibold text-[var(--text-h)]">Personal Projects</h2>
       <p className="mt-2 text-sm text-[var(--text-muted)]">
-        A few things I've built on the side.
+        Built using AI Coding tools like Claude Code, VS Code, and Amazon Kiro.
       </p>
 
       <div className="mt-10 grid grid-cols-1 items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
