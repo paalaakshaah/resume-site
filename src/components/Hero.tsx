@@ -6,7 +6,6 @@ import {
   LinkedInIcon,
   EmailIcon,
   PhoneIcon,
-  LocationIcon,
   DownloadIcon,
 } from "./Icons";
 
@@ -46,8 +45,7 @@ export default function Hero() {
         </h1>
         <p className="mt-3 text-lg text-[var(--hero-text)]">{profile.title}</p>
 
-        <div className="mt-2 flex items-center gap-1.5 text-sm text-[var(--hero-text-muted)]">
-          <LocationIcon className="h-3.5 w-3.5" />
+        <div className="mt-2 text-base text-[var(--hero-text-muted)]">
           <span>{profile.location}</span>
         </div>
 

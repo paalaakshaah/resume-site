@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="relative border-t border-[var(--hero-border)]">
       <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-6 py-16 text-center">
         <p className="text-sm text-[var(--hero-text)]">
-          {profile.email} · {profile.phone} · {profile.location}
+          {profile.email} · {profile.phone} · {profile.city}
         </p>
 
         <div className="flex items-center gap-4">

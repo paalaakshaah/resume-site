@@ -21,13 +21,14 @@ export const podcast = {
 export const profile = {
   name: "Palak Shah",
   title: "Software Engineer — ML, Bigdata & Gen AI",
-  location: "Hoboken, NJ",
+  location: "Ex-Google",
+  city: "Hoboken, NJ",
   phone: "(352) 433-9024",
   email: "spalak12@gmail.com",
   linkedin: "https://www.linkedin.com/in/palakshah2015/",
   github: "https://github.com/paalaakshaah",
   summary:
-    "Software Engineer with 10+ years of experience at Google building scalable systems across Maps, Auto, and Ads. Specializing in machine learning, large-scale data ecosystems, and Gen AI development.",
+    "Software Engineer with 10+ years of experience building scalable systems across Maps, Auto, and Ads. Specializing in machine learning, large-scale data ecosystems, and Gen AI development.",
 };
 
 export type Project = {
