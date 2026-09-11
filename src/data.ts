@@ -83,6 +83,7 @@ export const projects: Project[] = [
       "Validated workflows on live Android emulators, pairing interaction testing with direct SQLite inspection to isolate runtime bugs that passed type checking",
     ],
     accent: "red",
+    link: "https://github.com/paalaakshaah/meal-prep-app",
   },
 ];
 
