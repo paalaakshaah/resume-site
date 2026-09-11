@@ -71,12 +71,18 @@ export const projects: Project[] = [
     link: "https://github.com/paalaakshaah/Visa-Bulletin-Tracker",
   },
   {
-    title: "Side Project",
-    period: "Coming soon",
-    blurb: "Details coming soon.",
-    bullets: [],
+    title: "Meal Prep — Offline Meal Planning & Nutrition App",
+    period: "2026",
+    blurb:
+      "An offline Android app, built with Claude, designed around Indian home cooking to help users plan meals and manage weight — no servers, accounts, or backend APIs.",
+    bullets: [
+      "Designed an offline data layer with React Native, TypeScript, and SQLite to store user profiles, targets, and recipe databases locally on-device",
+      "Stored recipe nutrition per 100 grams instead of fixed serving sizes, so calculations stay precise regardless of cooked dish volume",
+      "Integrated Google ML Kit on-device OCR to create ingredients and recipes from nutrition label photos, rewriting the parser to use raw text coordinates instead of reading order — resolving multi-column label mismatches and raising extraction accuracy from 5/6 to 6/6",
+      "Calculated daily calorie and macro targets with the Mifflin-St Jeor formula, requiring explicit user confirmation before recalculating so stat updates never silently wipe out custom overrides",
+      "Validated workflows on live Android emulators, pairing interaction testing with direct SQLite inspection to isolate runtime bugs that passed type checking",
+    ],
     accent: "red",
-    placeholder: true,
   },
 ];
 
